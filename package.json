@@ -1,0 +1,61 @@
+{
+  "name": "sovereign-economic-defense",
+  "version": "1.0.0",
+  "description": "Public proof bundles, deployment evidence, and integrity tooling for the Sovereign Economic Defense system",
+  "type": "module",
+  "author": "AnubisQuantumCipher",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnubisQuantumCipher/sovereign-economic-defense-public"
+  },
+  "homepage": "https://github.com/AnubisQuantumCipher/sovereign-economic-defense-public",
+  "bugs": {
+    "url": "https://github.com/AnubisQuantumCipher/sovereign-economic-defense-public/issues"
+  },
+  "keywords": [
+    "midnight",
+    "evidence",
+    "proofs",
+    "governance",
+    "compliance",
+    "verification",
+    "artifact-only"
+  ],
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "bin": {
+    "sovereign-economic-defense": "dist/bin/cli.js"
+  },
+  "files": [
+    "dist",
+    "manifests",
+    "proofs",
+    "evidence",
+    "checksums",
+    "README.md",
+    "LICENSE",
+    "CONSTITUTION.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist coverage .vitest",
+    "refresh:checksums": "node ./scripts/refresh-checksums.mjs",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm run refresh:checksums && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "25.5.0",
+    "typescript": "6.0.2",
+    "vitest": "4.1.2"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
