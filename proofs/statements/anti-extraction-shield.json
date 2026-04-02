@@ -1,0 +1,25 @@
+{
+  "schema": "sed-public-statement-v1",
+  "statement_id": "anti-extraction-shield",
+  "title": "Anti-Extraction Shield",
+  "claim": "A verifier-compatible proof payload was produced for the listed public inputs under the listed program digest.",
+  "backend": "arkworks-groth16",
+  "program_digest": "6b2ac2830a0f3adb663b43c894ada5f5e55042247864d1b1343eed6f91320235",
+  "public_inputs": [
+    "12666088493990563517155888340847164611394547271470435338153816678027232696257",
+    "1"
+  ],
+  "deployment": {
+    "contract": "anti-extraction-shield",
+    "address": "916ad30ac904af6d320211eb18a902474f3ca0a958248dbe8831ee69614216fd",
+    "txHash": "c147265a99848e16cbcebef7fcdb1069185f201f9d169b455af628f5eefa02c3",
+    "explorerUrl": "https://explorer.preprod.midnight.network/transactions/c147265a99848e16cbcebef7fcdb1069185f201f9d169b455af628f5eefa02c3"
+  },
+  "published_artifacts": {
+    "proof_bundle": "proofs/zkproofs/anti-extraction-shield.json"
+  },
+  "notes": [
+    "Implementation source is intentionally omitted from this repository.",
+    "Private witness inputs are not published."
+  ]
+}

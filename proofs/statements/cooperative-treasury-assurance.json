@@ -1,0 +1,25 @@
+{
+  "schema": "sed-public-statement-v1",
+  "statement_id": "cooperative-treasury-assurance",
+  "title": "Cooperative Treasury Assurance",
+  "claim": "A verifier-compatible proof payload was produced for the listed public inputs under the listed program digest.",
+  "backend": "plonky3",
+  "program_digest": "8ab015197b96f2042cd2daeef476c075641e12837de79d2ae0984b8a601637d6",
+  "public_inputs": [
+    "18131687803866814419",
+    "1"
+  ],
+  "deployment": {
+    "contract": "cooperative-treasury",
+    "address": "48d0591b58d97f9fd48319cf9eb459dc9979df770e05fd4b0ccb3e99302b5955",
+    "txHash": "f99edfaf4ec0d46ea405e2e98d03c9fa40803a36555a5fa362a3879a54590d02",
+    "explorerUrl": "https://explorer.preprod.midnight.network/transactions/f99edfaf4ec0d46ea405e2e98d03c9fa40803a36555a5fa362a3879a54590d02"
+  },
+  "published_artifacts": {
+    "proof_bundle": "proofs/zkproofs/cooperative-treasury-assurance.json"
+  },
+  "notes": [
+    "Implementation source is intentionally omitted from this repository.",
+    "Private witness inputs are not published."
+  ]
+}

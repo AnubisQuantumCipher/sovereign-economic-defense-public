@@ -1,0 +1,83 @@
+{
+  "schema": "sed-public-release-manifest-v1",
+  "name": "sovereign-economic-defense-public",
+  "version": "1.0.0",
+  "created": "2026-04-02",
+  "releaseType": "artifact-only",
+  "sourceVisibility": "private",
+  "includesSourceCode": false,
+  "includesRuntimeMetadata": false,
+  "includesLocalPaths": false,
+  "proofRunDate": "2026-03-30",
+  "deploymentDate": "2026-03-31",
+  "materials": [
+    "proofs/zkproofs",
+    "proofs/statements",
+    "manifests/deployment-manifest.json",
+    "manifests/proof-manifest.json",
+    "evidence",
+    "checksums/sha256.txt"
+  ],
+  "components": [
+    {
+      "component": "anti-extraction-shield",
+      "title": "Anti-Extraction Shield",
+      "backend": "arkworks-groth16",
+      "program_digest": "6b2ac2830a0f3adb663b43c894ada5f5e55042247864d1b1343eed6f91320235",
+      "proof_bundle": "proofs/zkproofs/anti-extraction-shield.json",
+      "statement": "proofs/statements/anti-extraction-shield.json",
+      "deployment_contract": "anti-extraction-shield",
+      "deployment_tx_hash": "c147265a99848e16cbcebef7fcdb1069185f201f9d169b455af628f5eefa02c3",
+      "proof_encoding": "hex-utf8",
+      "verification_key_encoding": "hex-utf8"
+    },
+    {
+      "component": "community-land-trust-governance",
+      "title": "Community Land Trust Governance",
+      "backend": "plonky3",
+      "program_digest": "9b3d1da8e5f5b016b58ab8cf3dc0f98c73e9aa59484eef878fdbd0be98bae50a",
+      "proof_bundle": "proofs/zkproofs/community-land-trust-governance.json",
+      "statement": "proofs/statements/community-land-trust-governance.json",
+      "deployment_contract": "community-land-trust",
+      "deployment_tx_hash": "2f9f43543953478a7d8d409edee16f7ee6acab196be45c26c834b7e69036dda1",
+      "proof_encoding": "hex-utf8",
+      "verification_key_encoding": "hex-utf8"
+    },
+    {
+      "component": "cooperative-treasury-assurance",
+      "title": "Cooperative Treasury Assurance",
+      "backend": "plonky3",
+      "program_digest": "8ab015197b96f2042cd2daeef476c075641e12837de79d2ae0984b8a601637d6",
+      "proof_bundle": "proofs/zkproofs/cooperative-treasury-assurance.json",
+      "statement": "proofs/statements/cooperative-treasury-assurance.json",
+      "deployment_contract": "cooperative-treasury",
+      "deployment_tx_hash": "f99edfaf4ec0d46ea405e2e98d03c9fa40803a36555a5fa362a3879a54590d02",
+      "proof_encoding": "hex-utf8",
+      "verification_key_encoding": "hex-utf8"
+    },
+    {
+      "component": "recirculation-sovereignty-score",
+      "title": "Recirculation Sovereignty Score",
+      "backend": "plonky3",
+      "program_digest": "0375b4f1885ed836a94a0b564d767e61395b1ed20146b31cde702bfa62929428",
+      "proof_bundle": "proofs/zkproofs/recirculation-sovereignty-score.json",
+      "statement": "proofs/statements/recirculation-sovereignty-score.json",
+      "deployment_contract": "sovereignty-score",
+      "deployment_tx_hash": "1a6564f27868866ba9d6a0593029f42026b0687e113bc4ce9373c5662eb687cf",
+      "proof_encoding": "hex-utf8",
+      "verification_key_encoding": "hex-utf8"
+    },
+    {
+      "component": "wealth-trajectory-assurance",
+      "title": "Wealth Trajectory Assurance",
+      "backend": "plonky3",
+      "program_digest": "090b8d66292ba8523ee63f184b2dbd1f05eecbffa90ca714cb8aabe4acb05f42",
+      "proof_bundle": "proofs/zkproofs/wealth-trajectory-assurance.json",
+      "statement": "proofs/statements/wealth-trajectory-assurance.json",
+      "deployment_contract": "wealth-trajectory",
+      "deployment_tx_hash": "37c7aa632cf57ee72149b67daa6bf6055139f39331bb26c33229bef282f3b35f",
+      "proof_encoding": "hex-utf8",
+      "verification_key_encoding": "hex-utf8"
+    }
+  ]
+}

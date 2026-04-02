@@ -1,0 +1,25 @@
+{
+  "schema": "sed-public-statement-v1",
+  "statement_id": "wealth-trajectory-assurance",
+  "title": "Wealth Trajectory Assurance",
+  "claim": "A verifier-compatible proof payload was produced for the listed public inputs under the listed program digest.",
+  "backend": "plonky3",
+  "program_digest": "090b8d66292ba8523ee63f184b2dbd1f05eecbffa90ca714cb8aabe4acb05f42",
+  "public_inputs": [
+    "4137441625715740398",
+    "1"
+  ],
+  "deployment": {
+    "contract": "wealth-trajectory",
+    "address": "ef30958c89d7bf7cc5649095e0281e647c93662d6b299a9878ce3924c1c146f5",
+    "txHash": "37c7aa632cf57ee72149b67daa6bf6055139f39331bb26c33229bef282f3b35f",
+    "explorerUrl": "https://explorer.preprod.midnight.network/transactions/37c7aa632cf57ee72149b67daa6bf6055139f39331bb26c33229bef282f3b35f"
+  },
+  "published_artifacts": {
+    "proof_bundle": "proofs/zkproofs/wealth-trajectory-assurance.json"
+  },
+  "notes": [
+    "Implementation source is intentionally omitted from this repository.",
+    "Private witness inputs are not published."
+  ]
+}

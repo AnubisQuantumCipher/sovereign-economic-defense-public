@@ -1,0 +1,25 @@
+{
+  "schema": "sed-public-statement-v1",
+  "statement_id": "community-land-trust-governance",
+  "title": "Community Land Trust Governance",
+  "claim": "A verifier-compatible proof payload was produced for the listed public inputs under the listed program digest.",
+  "backend": "plonky3",
+  "program_digest": "9b3d1da8e5f5b016b58ab8cf3dc0f98c73e9aa59484eef878fdbd0be98bae50a",
+  "public_inputs": [
+    "11746324181652426737",
+    "1"
+  ],
+  "deployment": {
+    "contract": "community-land-trust",
+    "address": "afde9f531faaaf26bec2730353e65f48bfcb5b83d9e90d24a5438a1f0f843ee5",
+    "txHash": "2f9f43543953478a7d8d409edee16f7ee6acab196be45c26c834b7e69036dda1",
+    "explorerUrl": "https://explorer.preprod.midnight.network/transactions/2f9f43543953478a7d8d409edee16f7ee6acab196be45c26c834b7e69036dda1"
+  },
+  "published_artifacts": {
+    "proof_bundle": "proofs/zkproofs/community-land-trust-governance.json"
+  },
+  "notes": [
+    "Implementation source is intentionally omitted from this repository.",
+    "Private witness inputs are not published."
+  ]
+}

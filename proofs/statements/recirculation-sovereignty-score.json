@@ -1,0 +1,26 @@
+{
+  "schema": "sed-public-statement-v1",
+  "statement_id": "recirculation-sovereignty-score",
+  "title": "Recirculation Sovereignty Score",
+  "claim": "A verifier-compatible proof payload was produced for the listed public inputs under the listed program digest.",
+  "backend": "plonky3",
+  "program_digest": "0375b4f1885ed836a94a0b564d767e61395b1ed20146b31cde702bfa62929428",
+  "public_inputs": [
+    "884825005118995494",
+    "1",
+    "15459207971771127844"
+  ],
+  "deployment": {
+    "contract": "sovereignty-score",
+    "address": "4a4582989d65c3ac73d5335172103a0d74b73ad8528ebb001e746be9f1c104fd",
+    "txHash": "1a6564f27868866ba9d6a0593029f42026b0687e113bc4ce9373c5662eb687cf",
+    "explorerUrl": "https://explorer.preprod.midnight.network/transactions/1a6564f27868866ba9d6a0593029f42026b0687e113bc4ce9373c5662eb687cf"
+  },
+  "published_artifacts": {
+    "proof_bundle": "proofs/zkproofs/recirculation-sovereignty-score.json"
+  },
+  "notes": [
+    "Implementation source is intentionally omitted from this repository.",
+    "Private witness inputs are not published."
+  ]
+}

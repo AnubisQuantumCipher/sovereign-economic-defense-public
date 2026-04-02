@@ -1,0 +1,44 @@
+{
+  "schema": "sed-public-deployment-manifest-v1",
+  "network": "preprod",
+  "networkName": "Midnight Preprod",
+  "deployedAt": "2026-03-31T05:03:01.518Z",
+  "updatedAt": "2026-03-31T05:04:20.183Z",
+  "contracts": [
+    {
+      "name": "cooperative-treasury",
+      "address": "48d0591b58d97f9fd48319cf9eb459dc9979df770e05fd4b0ccb3e99302b5955",
+      "txHash": "f99edfaf4ec0d46ea405e2e98d03c9fa40803a36555a5fa362a3879a54590d02",
+      "deployedAt": "2026-03-31T05:03:01.518Z",
+      "explorerUrl": "https://explorer.preprod.midnight.network/transactions/f99edfaf4ec0d46ea405e2e98d03c9fa40803a36555a5fa362a3879a54590d02"
+    },
+    {
+      "name": "community-land-trust",
+      "address": "afde9f531faaaf26bec2730353e65f48bfcb5b83d9e90d24a5438a1f0f843ee5",
+      "txHash": "2f9f43543953478a7d8d409edee16f7ee6acab196be45c26c834b7e69036dda1",
+      "deployedAt": "2026-03-31T05:03:23.197Z",
+      "explorerUrl": "https://explorer.preprod.midnight.network/transactions/2f9f43543953478a7d8d409edee16f7ee6acab196be45c26c834b7e69036dda1"
+    },
+    {
+      "name": "anti-extraction-shield",
+      "address": "916ad30ac904af6d320211eb18a902474f3ca0a958248dbe8831ee69614216fd",
+      "txHash": "c147265a99848e16cbcebef7fcdb1069185f201f9d169b455af628f5eefa02c3",
+      "deployedAt": "2026-03-31T05:03:43.665Z",
+      "explorerUrl": "https://explorer.preprod.midnight.network/transactions/c147265a99848e16cbcebef7fcdb1069185f201f9d169b455af628f5eefa02c3"
+    },
+    {
+      "name": "wealth-trajectory",
+      "address": "ef30958c89d7bf7cc5649095e0281e647c93662d6b299a9878ce3924c1c146f5",
+      "txHash": "37c7aa632cf57ee72149b67daa6bf6055139f39331bb26c33229bef282f3b35f",
+      "deployedAt": "2026-03-31T05:04:02.602Z",
+      "explorerUrl": "https://explorer.preprod.midnight.network/transactions/37c7aa632cf57ee72149b67daa6bf6055139f39331bb26c33229bef282f3b35f"
+    },
+    {
+      "name": "sovereignty-score",
+      "address": "4a4582989d65c3ac73d5335172103a0d74b73ad8528ebb001e746be9f1c104fd",
+      "txHash": "1a6564f27868866ba9d6a0593029f42026b0687e113bc4ce9373c5662eb687cf",
+      "deployedAt": "2026-03-31T05:04:20.183Z",
+      "explorerUrl": "https://explorer.preprod.midnight.network/transactions/1a6564f27868866ba9d6a0593029f42026b0687e113bc4ce9373c5662eb687cf"
+    }
+  ]
+}
