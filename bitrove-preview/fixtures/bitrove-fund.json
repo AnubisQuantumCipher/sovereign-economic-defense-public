@@ -1,0 +1,13 @@
+{
+  "label": "Bitrove fund",
+  "description": "Happy-path fund transition for the first Bitrove Midnight preview pilot.",
+  "actor_wallet_name": "buyer-wallet",
+  "expected_outcome": "submit",
+  "step": "fund",
+  "escrow_id": "2001",
+  "buyer_ref": "bitrove-buyer",
+  "seller_ref": "bitrove-seller",
+  "parcel_ref": "bitrove-order-2001",
+  "amount_minor_units": "125000",
+  "receipt_confirmed": false
+}

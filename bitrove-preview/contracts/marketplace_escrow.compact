@@ -1,0 +1,88 @@
+pragma language_version 0.22;
+
+import CompactStandardLibrary;
+
+// ============================================================================
+// Marketplace Escrow Pilot
+// ============================================================================
+//
+// This is a bounded Bitrove-style pilot contract for the first live hosted
+// proving integration:
+//   - `fund` opens or replaces the active escrow slot
+//   - `confirm` closes the active funded escrow
+//
+// It is intentionally scoped to the first marketplace happy path. The hosted
+// proving lane and the wallet connector already handle prepare -> prove ->
+// balance -> submit -> finalize. This contract adds the escrow-specific public
+// state and transition assertions that the generic SED demo contracts did not.
+
+export ledger escrow_id: Uint<64>;
+export ledger buyer_binding: Bytes<32>;
+export ledger seller_binding: Bytes<32>;
+export ledger parcel_reference: Bytes<32>;
+export ledger amount_minor_units: Uint<64>;
+export ledger buyer_actor_binding: Bytes<32>;
+export ledger funded: Boolean;
+export ledger confirmed: Boolean;
+export ledger status_code: Uint<8>;
+
+witness actionCode(): Uint<8>;              // 1 = fund, 2 = confirm
+witness escrowId(): Uint<64>;
+witness buyerBinding(): Bytes<32>;
+witness sellerBinding(): Bytes<32>;
+witness parcelReference(): Bytes<32>;
+witness amountMinorUnits(): Uint<64>;
+witness receiptConfirmed(): Boolean;
+
+export circuit advanceEscrow(): [] {
+  const action = actionCode();
+  const nextEscrowId = escrowId();
+  const nextBuyer = buyerBinding();
+  const nextSeller = sellerBinding();
+  const nextParcel = parcelReference();
+  const nextAmount = amountMinorUnits();
+  const receiptOk = receiptConfirmed();
+  const actorBinding = persistentHash<Bytes<32>>(disclose(ownPublicKey().bytes));
+
+  const priorEscrowId = escrow_id;
+  const priorBuyer = buyer_binding;
+  const priorSeller = seller_binding;
+  const priorParcel = parcel_reference;
+  const priorAmount = amount_minor_units;
+  const priorBuyerActor = buyer_actor_binding;
+  const priorFunded = funded;
+  const priorConfirmed = confirmed;
+  const priorStatus = status_code;
+
+  const isFund = action == 1;
+  const isConfirm = action == 2;
+
+  assert(isFund || isConfirm, "action_code must be 1 (fund) or 2 (confirm)");
+  assert(nextEscrowId > 0, "escrow_id must be positive");
+  assert(nextAmount > 0, "amount_minor_units must be positive");
+
+  const canStartNew = !priorFunded || priorConfirmed || priorStatus == 0;
+  const canConfirm = priorFunded && !priorConfirmed && priorStatus == 1;
+
+  assert(!isFund || canStartNew, "cannot fund a new escrow while the prior escrow is still awaiting confirmation");
+  assert(!isConfirm || canConfirm, "confirm requires an active funded escrow");
+  assert(!isConfirm || nextEscrowId == priorEscrowId, "confirm must target the active escrow_id");
+  assert(!isConfirm || nextBuyer == priorBuyer, "buyer binding must match the active funded escrow");
+  assert(!isConfirm || nextSeller == priorSeller, "seller binding must match the active funded escrow");
+  assert(!isConfirm || nextParcel == priorParcel, "parcel reference must match the active funded escrow");
+  assert(!isConfirm || nextAmount == priorAmount, "amount must match the active funded escrow");
+  assert(!isConfirm || actorBinding == priorBuyerActor, "confirm must be submitted by the same buyer wallet that funded the escrow");
+  assert(!isConfirm || receiptOk, "confirm requires receipt confirmation witness");
+
+  const nextConfirmed = disclose(isConfirm);
+  const nextStatus = disclose(isFund ? 1 : 2);
+  escrow_id = disclose(nextEscrowId);
+  buyer_binding = disclose(nextBuyer);
+  seller_binding = disclose(nextSeller);
+  parcel_reference = disclose(nextParcel);
+  amount_minor_units = disclose(nextAmount);
+  buyer_actor_binding = disclose(actorBinding);
+  funded = disclose(true);
+  confirmed = nextConfirmed;
+  status_code = nextStatus;
+}

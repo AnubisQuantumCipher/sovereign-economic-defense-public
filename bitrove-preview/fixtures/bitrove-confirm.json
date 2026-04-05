@@ -1,0 +1,13 @@
+{
+  "label": "Bitrove confirm",
+  "description": "Same-wallet confirm transition after the funded escrow finalizes on Midnight preview.",
+  "actor_wallet_name": "buyer-wallet",
+  "expected_outcome": "submit",
+  "step": "confirm",
+  "escrow_id": "2001",
+  "buyer_ref": "bitrove-buyer",
+  "seller_ref": "bitrove-seller",
+  "parcel_ref": "bitrove-order-2001",
+  "amount_minor_units": "125000",
+  "receipt_confirmed": true
+}

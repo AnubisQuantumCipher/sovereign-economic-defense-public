@@ -1,0 +1,14 @@
+{
+  "label": "Bitrove wrong-wallet confirm",
+  "description": "Negative confirm attempt using a different buyer wallet. The payload is identical to the happy-path confirm fixture; only the acting wallet changes.",
+  "actor_wallet_name": "wrong-wallet",
+  "expected_outcome": "reject",
+  "expected_error_contains": "same buyer wallet",
+  "step": "confirm",
+  "escrow_id": "2001",
+  "buyer_ref": "bitrove-buyer",
+  "seller_ref": "bitrove-seller",
+  "parcel_ref": "bitrove-order-2001",
+  "amount_minor_units": "125000",
+  "receipt_confirmed": true
+}
